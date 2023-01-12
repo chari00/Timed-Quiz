@@ -87,3 +87,12 @@ let questions = [
     correctAnswer: 3,
   },
 ];
+
+let start = document.querySelector("#start");
+let timer = document.querySelector(".timer");
+let time = document.querySelector("#time");
+let question = document.querySelector("#question");
+let choices = document.querySelector("#choices");
+
+//loop questionaires to move to next question
+//let incorrect = question - timer;
