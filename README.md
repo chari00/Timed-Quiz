@@ -1,88 +1,51 @@
-# Module 6 Challenge Web APIs: Code Quiz
+# Timed Quiz
 
-## Your Task
+## Table of Content
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+1. Description
+2. Visual
+3. Built with:
+4. What I learned
+5. Links
+6. Resources
+7. License
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
+## 1. Description
 
+    This  is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
 
-## User Story
+## 2. Visual
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+### Image of the project in console view.
 
-## Acceptance Criteria
+- <img src="./images/lengthrequired.png">
 
-Create a code quiz that contains the following requirements:
+## 3. Built with:
 
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
+- javascript
+- html
+- css
 
-* The quiz should end when all questions are answered or the timer reaches 0.
+## 4. What I learned
 
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
+To see how you can add code functions, see below:
 
-The following animation demonstrates the application functionality:
+## 5. Links
 
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
+### Source code location
 
-## Grading Requirements
+https://github.com/chari00/Timed-Quiz
 
-This challenge is graded based on the following criteria: 
+### Deployed website URL
 
-### Technical Acceptance Criteria: 40%
+https://chari00.github.io/Password-Generator/
 
-* Satisfies all of the above acceptance criteria.
+## 6. Resources
 
-### Deployment: 32%
+### URL for resources
 
-* Application deployed at live URL.
+-
 
-* Application loads with no errors.
+## 7. License
 
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+This project is licensed by MIT.
