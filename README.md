@@ -44,7 +44,7 @@ https://chari00.github.io/Password-Generator/
 
 ### URL for resources
 
--
+- https://www.w3schools.com/js/js_quiz.asp
 
 ## 7. License
 
