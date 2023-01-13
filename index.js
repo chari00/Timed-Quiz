@@ -93,6 +93,31 @@ let timer = document.querySelector(".timer");
 let time = document.querySelector("#time");
 let question = document.querySelector("#question");
 let choices = document.querySelector("#choices");
+let finalScore = document.querySelector("#final-score");
+
+// if start button (clicked ) {timer start counting}
+
+start.addEventListener("click");
 
 //loop questionaires to move to next question
-//let incorrect = question - timer;
+for (let i = 0; i < questions.length; i++) {
+  let question = questions[i];
+  console.log(question);
+}
+
+//create if statement to identify the correct answer.
+let correctAnswer = correctAnswer[i] === choices;
+console.log(correctAnswer);
+
+let incorrectAnswer = question === false;
+let timePenalty = 10000;
+
+if (incorrectAnswer === true) {
+  let timeLeft = time - (time.length - timePenalty);
+} else {
+  finalScore += 1;
+}
+
+// Create button to each choices.
+
+//quiz end when questions < questions.lenght || timeLeft = 0
