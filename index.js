@@ -89,35 +89,69 @@ let questions = [
 ];
 
 let start = document.querySelector("#start");
-let timer = document.querySelector(".timer");
 let time = document.querySelector("#time");
-let question = document.querySelector("#question");
 let choices = document.querySelector("#choices");
+let scores = document.querySelector(".scores");
 let finalScore = document.querySelector("#final-score");
+let submit = document.querySelector("#submit").textContent;
 
 // if start button (clicked ) {timer start counting}
 
-start.addEventListener("click");
+// start.addEventListener("click");
 
 //loop questionaires to move to next question
+let currentQuestion = 0;
+let currentChoices = 0;
+let correctAnswer = 0;
+let timeLeft = 10;
+
+// console.log(choices);
+
 for (let i = 0; i < questions.length; i++) {
-  let question = questions[i];
-  console.log(question);
+  document.querySelector("#question-title").textContent = questions[0].question;
 }
+choices.textContent = questions[0].choices[0];
+choices.textContent = questions[0].choices[1];
+choices.textContent = questions[0].choices[2];
+choices.textContent = questions[0].choices[3];
+
+// console.log(correctAnswer);
+
+// set time interval
+function timer() {
+  let timeInterval = setInterval(function () {
+    timeLeft--;
+    time.textContent = timeLeft;
+
+    if (timeLeft === 0 || questions === questions.length - 1) {
+      clearInterval(timeInterval);
+      return submit();
+    }
+  }, 1000);
+}
+timer();
 
 //create if statement to identify the correct answer.
-let correctAnswer = correctAnswer[i] === choices;
-console.log(correctAnswer);
+// let correctAnswer = correctAnswer[i] === choices;
+// console.log(correctAnswer);
 
-let incorrectAnswer = question === false;
-let timePenalty = 10000;
+// let incorrectAnswer = question === false;
+// let timePenalty = 10000;
 
-if (incorrectAnswer === true) {
-  let timeLeft = time - (time.length - timePenalty);
-} else {
-  finalScore += 1;
-}
+// if (incorrectAnswer === true) {
+//   let timeLeft = time - (time.length - timePenalty);
+// } else {
+//   finalScore += 1;
+// }
 
 // Create button to each choices.
 
+// choices.addeventlistener("click", function (event) {
+//   if (event.target.matches("button")) {
+//     event.target.getAttribute("   ");
+//   }
+// });
+
 //quiz end when questions < questions.lenght || timeLeft = 0
+
+//add event listener for submit button
