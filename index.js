@@ -89,45 +89,70 @@ let questions = [
 ];
 
 let time = document.querySelector("#time");
-let choices = document.querySelector("#choices");
+let choicesContainer = document.querySelector("#choices");
+let questionsContainer = document.querySelector("#questions");
 let ul = document.querySelector(".choices");
 let scores = document.querySelector(".scores");
 let finalScore = document.querySelector("#final-score");
 let submit = document.querySelector("#submit").textContent;
+let startContainer = document.querySelector("#start-screen");
+let endContainer = document.querySelector("#end-screen");
 let themeSwitcher = document.querySelector("#start");
 let wrapper = document.querySelector(".wrapper");
 let startbtn = document.querySelector("#start");
 
-console.log(ul);
-console.log(choices);
-
-// if start button (clicked ) {timer start counting}
-
-//loop questionaires to move to next question
-let currentQuestion = 0;
+let questionIndex = 0;
 let currentChoices = 0;
 let correctAnswer = 0;
-let timeLeft = 10;
-// console.log(choices);
+let timeLeft = 13;
+
 themeSwitcher.addEventListener("click", function () {
-  if (condition) {
-  }
+  startContainer.classList.add("hide"); // adding a class of "hide" on the targeted element
+  renderQuestion();
 });
 
-for (let i = 0; i < questions.length; i++) {
-  document.querySelector("#question-title").textContent = questions[i].question;
+function renderQuestion() {
+  choicesContainer.innerHTML = "";
+  // display question
+  document.querySelector("#question-title").textContent =
+    questions[questionIndex].question;
 
-  choices.textContent = questions[i].choices[0];
-  choices.textContent = questions[i].choices[1];
-  choices.textContent = questions[i].choices[2];
-  choices.textContent = questions[i].choices[3];
+  // my array of choices for every question
+  const choices = questions[questionIndex].choices;
 
-  // capture correct answer
-  // if answer is wrong, take time = time - 10 and display wrong
-  // else display correct
+  // display answers
+  for (let i = 0; i < choices.length; i++) {
+    // create the choices buttons
+    const choiceButton = document.createElement("button");
+    choiceButton.textContent = choices[i];
+    choicesContainer.appendChild(choiceButton);
+
+    choiceButton.addEventListener("click", function () {
+      checkAnswer(i, questions[questionIndex].correctAnswer);
+    });
+  }
 }
 
-// console.log(correctAnswer);
+function checkAnswer(currentChoiceIndex, expectedIndex) {
+  if (currentChoiceIndex === expectedIndex) {
+    // increse the question index to render the next one
+    questionIndex++;
+    renderQuestion();
+  } else {
+    // subtract time from timer
+    if (timeLeft > 10) {
+      timeLeft -= 10;
+    } else {
+      timeLeft = 1;
+    }
+    console.log("WRONG ANSWER");
+  }
+}
+
+function endQuiz(params) {
+  questionsContainer.classList.add("hide");
+  endContainer.classList.remove("hide");
+}
 
 // set time interval
 function timer() {
@@ -135,34 +160,21 @@ function timer() {
     timeLeft--;
     time.textContent = timeLeft;
 
-    if (timeLeft === 0 || questions === questions.length - 1) {
+    if (timeLeft === 0 || questionIndex === questions.length - 1) {
       clearInterval(timeInterval);
-      return submit();
+
+      console.log("QUIZ IS DONE!!!");
+      endQuiz();
+      // return submit();
     }
   }, 1000);
 }
 timer();
 
-//create if statement to identify the correct answer.
-// let correctAnswer = correctAnswer[i] === choices;
-// console.log(correctAnswer);
-
-// let incorrectAnswer = question === false;
-// let timePenalty = 10000;
-
-// if (incorrectAnswer === true) {
-//   let timeLeft = time - (time.length - timePenalty);
-// } else {
-//   finalScore += 1;
-// }
-
-// Create button to each choices.
-
-// choices.addeventlistener("click", function (event) {
-//   if (event.target.matches("button")) {
-//     event.target.getAttribute("   ");
-//   }
-// });
+// collect the timer value and user name at the end of quiz
+// build an object with those values { name: "John", score:23 }
+// store that object in an ARRAY in Local Storage
+// display all scores from the array on local storage
 
 //quiz end when questions < questions.lenght || timeLeft = 0
 
