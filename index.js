@@ -88,32 +88,44 @@ let questions = [
   },
 ];
 
-let start = document.querySelector("#start");
 let time = document.querySelector("#time");
 let choices = document.querySelector("#choices");
+let ul = document.querySelector(".choices");
 let scores = document.querySelector(".scores");
 let finalScore = document.querySelector("#final-score");
 let submit = document.querySelector("#submit").textContent;
+let themeSwitcher = document.querySelector("#start");
+let wrapper = document.querySelector(".wrapper");
+let startbtn = document.querySelector("#start");
+
+console.log(ul);
+console.log(choices);
 
 // if start button (clicked ) {timer start counting}
-
-// start.addEventListener("click");
 
 //loop questionaires to move to next question
 let currentQuestion = 0;
 let currentChoices = 0;
 let correctAnswer = 0;
 let timeLeft = 10;
-
 // console.log(choices);
+themeSwitcher.addEventListener("click", function () {
+  if (condition) {
+  }
+});
 
 for (let i = 0; i < questions.length; i++) {
-  document.querySelector("#question-title").textContent = questions[0].question;
+  document.querySelector("#question-title").textContent = questions[i].question;
+
+  choices.textContent = questions[i].choices[0];
+  choices.textContent = questions[i].choices[1];
+  choices.textContent = questions[i].choices[2];
+  choices.textContent = questions[i].choices[3];
+
+  // capture correct answer
+  // if answer is wrong, take time = time - 10 and display wrong
+  // else display correct
 }
-choices.textContent = questions[0].choices[0];
-choices.textContent = questions[0].choices[1];
-choices.textContent = questions[0].choices[2];
-choices.textContent = questions[0].choices[3];
 
 // console.log(correctAnswer);
 
