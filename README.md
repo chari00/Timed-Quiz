@@ -44,7 +44,13 @@ https://chari00.github.io/Password-Generator/
 
 ### URL for resources
 
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
 - https://www.w3schools.com/js/js_quiz.asp
+
+- https://www.geeksforgeeks.org/html-dom-button-object/
+
+- https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
 ## 7. License
 

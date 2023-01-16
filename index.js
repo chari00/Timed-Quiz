@@ -104,10 +104,10 @@ let startbtn = document.querySelector("#start");
 let questionIndex = 0;
 let currentChoices = 0;
 let correctAnswer = 0;
-let timeLeft = 13;
+let timeLeft = 100;
 
 themeSwitcher.addEventListener("click", function () {
-  startContainer.classList.add("hide"); // adding a class of "hide" on the targeted element
+  startContainer.classList.add("hide");
   renderQuestion();
 });
 
@@ -160,7 +160,7 @@ function timer() {
     timeLeft--;
     time.textContent = timeLeft;
 
-    if (timeLeft === 0 || questionIndex === questions.length - 1) {
+    if (timeLeft === 0 || questionIndex === questions.length) {
       clearInterval(timeInterval);
 
       console.log("QUIZ IS DONE!!!");
@@ -175,7 +175,5 @@ timer();
 // build an object with those values { name: "John", score:23 }
 // store that object in an ARRAY in Local Storage
 // display all scores from the array on local storage
-
-//quiz end when questions < questions.lenght || timeLeft = 0
 
 //add event listener for submit button
