@@ -12,7 +12,7 @@
 
 ## 1. Description
 
-    This  is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
+This  is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
 
 ## 2. Visual
 
@@ -46,15 +46,6 @@ https://chari00.github.io/Password-Generator/
 
 ### URL for resources
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-
-- https://www.w3schools.com/js/js_quiz.asp
-
-- https://www.geeksforgeeks.org/html-dom-button-object/
-
-- https://developer.mozilla.org/en-US/docs/Web/API/setInterval
-
-- https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
 
 ## 7. License
 
