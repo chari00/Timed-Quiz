@@ -12,18 +12,27 @@
 
 ## 1. Description
 
-    This  is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
+This is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
 
 ## 2. Visual
 
 ### Image of the project in console view.
 
-![Alt text](assets/images/highscore.png)
-![Alt text](assets/images/quizdone.png)
-
 - <img src="/assets/images/quizdone.png">
 
-- - <img src="/assets/images/highscore.png">
+- <img src="/assets/images/highscore.png">
+
+### Image of the project in Webpage view.
+
+- <img src="/assets/images/beforequiz.png">
+
+- <img src="/assets/images/startquiz.png">
+
+- <img src="/assets/images/correct.png">
+
+- <img src="/assets/images/wrong.png">
+
+- <img src="/assets/images/score.png">
 
 ## 3. Built with:
 
