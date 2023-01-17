@@ -18,7 +18,9 @@ This  is a timed quiz project that allows the user to answer each questions with
 
 ### Image of the project in console view.
 
-- <img src="./images/lengthrequired.png">
+- <img src="/assets/images/quizdone.png">
+
+- <img src="/assets/images/highscore.png">
 
 ## 3. Built with:
 
@@ -44,7 +46,6 @@ https://chari00.github.io/Password-Generator/
 
 ### URL for resources
 
-- https://www.w3schools.com/js/js_quiz.asp
 
 ## 7. License
 
