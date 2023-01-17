@@ -91,7 +91,7 @@ let questions = [
 let time = document.querySelector("#time");
 let choicesContainer = document.querySelector("#choices");
 let questionsContainer = document.querySelector("#questions");
-let submit = document.querySelector("#submit").textContent;
+// let submit = document.querySelector("#submit").textContent;
 let startContainer = document.querySelector("#start-screen");
 let endContainer = document.querySelector("#end-screen");
 let feedbackContainer = document.querySelector("#feedback");
@@ -194,3 +194,12 @@ submitBtn.addEventListener("click", function (event) {
   localStorage.setItem("Final Score ", timeLeft);
 });
 //creat themeSwitcher for display feedback
+function highScore() {
+  //alert("Loaded");
+  let highscoreEl = document.querySelector("#highscores");
+  //console.log("local  " + localStorage.getItem("Final Score "));
+  highscoreEl.textContent =
+    localStorage.getItem("Initials") +
+    "  " +
+    localStorage.getItem("Final Score ");
+}
