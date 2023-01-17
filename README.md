@@ -22,6 +22,17 @@ This  is a timed quiz project that allows the user to answer each questions with
 
 - <img src="/assets/images/highscore.png">
 
+### Image of the project in Webpage view.
+
+- <img src="/assets/images/beforequiz.png">
+
+- <img src="/assets/images/startquiz.png">
+
+- <img src="/assets/images/correct.png">
+
+- <img src="/assets/images/wrong.png">
+
+- <img src="/assets/images/score.png">
 ## 3. Built with:
 
 - javascript
