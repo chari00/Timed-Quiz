@@ -51,7 +51,7 @@ https://github.com/chari00/Timed-Quiz
 
 ### Deployed website URL
 
-https://chari00.github.io/Password-Generator/
+https://chari00.github.io/Timed-Quiz/
 
 ## 6. Resources
 
