@@ -138,6 +138,7 @@ function checkAnswer(currentChoiceIndex, expectedIndex) {
 
   if (currentChoiceIndex === expectedIndex) {
     // correct answer
+    console.log("CORRECT ANSWER");
   } else {
     if (timeLeft > 10) {
       // subtract time from timer
@@ -152,9 +153,9 @@ function checkAnswer(currentChoiceIndex, expectedIndex) {
 function endQuiz() {
   questionsContainer.classList.add("hide");
   endContainer.classList.remove("hide");
+  feedbackContainer.classList.remove("hide");
 
   finalScore();
-  userInitials();
 }
 
 // set time interval
@@ -175,17 +176,9 @@ timer();
 // collect the timer value
 function finalScore() {
   let finalScoreEl = document.querySelector("#final-score");
-  // console.log("timecount " + timeLeft);
   finalScoreEl.textContent = timeLeft;
+  // console.log("timecount " + timeLeft);
 }
-// function userInitials() {
-//   //let initialsE1 = document.querySelector("#initials");
-//   //initialsE1.setAttribute("Initials", initialsE1.textContent);
-// }
-
-// build an object with those values { name: "John", score:23 }
-// store that object in an ARRAY in Local Storage
-// display all scores from the array on local storage
 
 //add event listener for submit button
 
@@ -196,8 +189,8 @@ submitBtn.addEventListener("click", function (event) {
   initialsE1.setAttribute("Initials", initialsE1.textContent);
 
   //Save data to localStorage.
-  // console.log("initi " + initialsE1.value + "score " + timeLeft);
+  console.log("initi " + initialsE1.value + "  score " + timeLeft);
   localStorage.setItem("Initials", initialsE1.value);
   localStorage.setItem("Final Score ", timeLeft);
 });
-//
+//creat themeSwitcher for display feedback
