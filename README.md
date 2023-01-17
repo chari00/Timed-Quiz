@@ -52,6 +52,8 @@ https://chari00.github.io/Password-Generator/
 
 - https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
+- https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
+
 ## 7. License
 
 This project is licensed by MIT.
