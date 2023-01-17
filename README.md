@@ -18,12 +18,9 @@
 
 ### Image of the project in console view.
 
-![Alt text](assets/images/highscore.png)
-![Alt text](assets/images/quizdone.png)
-
 - <img src="/assets/images/quizdone.png">
 
-- - <img src="/assets/images/highscore.png">
+- <img src="/assets/images/highscore.png">
 
 ## 3. Built with:
 
