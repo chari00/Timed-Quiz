@@ -24,19 +24,19 @@ This is a timed quiz project that allows the user to answer each questions with 
 
 ### Image of the project in Webpage view.
 
-When clicked Start Quiz button, Timer starts.
+#### When clicked Start Quiz button, Timer starts.
 
 - <img src="/assets/images/beforequiz.png">
 
 - <img src="/assets/images/startquiz.png">
 
-When answer clicked was incorrect the timer will decrement 10s for every incorrect answer.
+#### When answer clicked was incorrect the timer will decrement 10s for every incorrect answer.
 
 - <img src="/assets/images/correct.png">
 
 - <img src="/assets/images/wrong.png">
 
-The user can view the score when the game end.
+#### The user can view the score when the game end.
 
 - <img src="/assets/images/score.png">
 
@@ -87,8 +87,6 @@ https://chari00.github.io/Timed-Quiz/
 - https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
 - https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
-
-- https://www.w3schools.com/js/js_quiz.asp
 
 ## 7. License
 
