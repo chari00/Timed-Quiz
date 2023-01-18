@@ -94,7 +94,6 @@ let questionsContainer = document.querySelector("#questions");
 let startContainer = document.querySelector("#start-screen");
 let endContainer = document.querySelector("#end-screen");
 let themeSwitcher = document.querySelector("#start");
-let startbtn = document.querySelector("#start");
 let feedbackContainer = document.querySelector("#feedbackText");
 let questionIndex = 0;
 let correctAnswer = 0;
@@ -186,7 +185,6 @@ function finalScore() {
 }
 
 //add event listener for submit button
-
 let submitBtn = document.querySelector("#submit");
 if (submitBtn !== null) {
   submitBtn.addEventListener("click", function () {
