@@ -36,6 +36,7 @@
 - <img src="/assets/images/score.png">
 ## 3. Built with:
 
+- javascript
 - html
 - css
 
