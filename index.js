@@ -94,14 +94,13 @@ let questionsContainer = document.querySelector("#questions");
 let startContainer = document.querySelector("#start-screen");
 let endContainer = document.querySelector("#end-screen");
 let themeSwitcher = document.querySelector("#start");
-let wrapper = document.querySelector(".wrapper");
 let startbtn = document.querySelector("#start");
-
+let feedbackContainer = document.querySelector("#feedbackText");
 let questionIndex = 0;
 let correctAnswer = 0;
 let timeLeft = 100;
 
-themeSwitcher.addEventListener("click", function (event) {
+themeSwitcher.addEventListener("click", function () {
   startContainer.classList.add("hide");
   timeLeft = 100;
   renderQuestion();
@@ -115,11 +114,11 @@ function renderQuestion() {
     questions[questionIndex].question;
 
   // my array of choices for every question
-  const choices = questions[questionIndex].choices;
+  let choices = questions[questionIndex].choices;
 
   for (let i = 0; i < choices.length; i++) {
     // create the choices buttons
-    const choiceButton = document.createElement("button");
+    let choiceButton = document.createElement("button");
     choiceButton.textContent = choices[i];
     choicesContainer.appendChild(choiceButton);
 
@@ -129,27 +128,23 @@ function renderQuestion() {
   }
 }
 
-let feedbackContainer = document.querySelector("#feedback");
-// let feedbackEl = feedbackContainer.setAttribute("feedback", "Wrong");
 function checkAnswer(currentChoiceIndex, expectedIndex) {
   questionIndex++;
   renderQuestion();
 
   if (currentChoiceIndex === expectedIndex) {
     // correct answer
-    feedbackContainer.setAttribute("feedback", "Correct!");
-    feedbackContainer.classList.remove("hide");
+    feedbackContainer.textContent = "Correct!";
 
     // console.log("CORRECT ANSWER");
   } else {
+    feedbackContainer.textContent = "Wrong!";
     if (timeLeft > 10) {
       // subtract time from timer
       timeLeft -= 10;
     } else {
       timeLeft = 1;
-      feedbackContainer.setAttribute("feedback", "Wrong!");
     }
-    feedbackContainer.classList.remove("hide");
     // console.log("WRONG ANSWER");
   }
 }
@@ -159,6 +154,7 @@ function endQuiz() {
   endContainer.classList.remove("hide");
 
   finalScore();
+  feedbackContainer.textContent = "";
 }
 
 // set time interval
@@ -186,8 +182,7 @@ function finalScore() {
 //add event listener for submit button
 
 let submitBtn = document.querySelector("#submit");
-submitBtn.addEventListener("click", function (event) {
-  //submitBtn.innerHTML = initials;
+submitBtn.addEventListener("click", function () {
   let initialsE1 = document.querySelector("#initials");
   initialsE1.setAttribute("Initials", initialsE1.textContent);
   //Save data to localStorage.
@@ -195,7 +190,6 @@ submitBtn.addEventListener("click", function (event) {
   localStorage.setItem("Initials", initialsE1.value);
   localStorage.setItem("Final Score ", timeLeft);
 });
-//creat themeSwitcher for display feedback
 function highScore() {
   let highscoreEl = document.querySelector("#highscores");
   //console.log("local  " + localStorage.getItem("Final Score "));
