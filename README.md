@@ -36,6 +36,7 @@
 
 ## 3. Built with:
 
+- javascript
 - html
 - css
 
