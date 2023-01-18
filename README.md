@@ -34,6 +34,7 @@
 - <img src="/assets/images/wrong.png">
 
 - <img src="/assets/images/score.png">
+
 ## 3. Built with:
 
 - javascript
@@ -69,7 +70,6 @@ https://chari00.github.io/Timed-Quiz/
 - https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
 
 - https://www.w3schools.com/js/js_quiz.asp
-
 
 ## 7. License
 
