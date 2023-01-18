@@ -24,7 +24,7 @@ This is a timed quiz project that allows the user to answer each questions with 
 
 ### Image of the project in Webpage view.
 
-When clicked button Start Quiz, Timer starts.
+When clicked Start Quiz button, Timer starts.
 
 - <img src="/assets/images/beforequiz.png">
 
@@ -43,12 +43,26 @@ The user can view the score when the game end.
 ## 3. Built with:
 
 - javascript
+- local storage
 - html
 - css
 
 ## 4. What I learned
 
 To see how you can add code functions, see below:
+
+themeSwitcher.addEventListener("click", function (event) {
+startContainer.classList.add("hide");
+timeLeft = 100;
+renderQuestion();
+});
+
+function highScore() {
+let highscoreEl = document.querySelector("#highscores");
+highscoreEl.textContent =
+localStorage.getItem("Initials") +
+" " +
+localStorage.getItem("Final Score ");
 
 ## 5. Links
 
