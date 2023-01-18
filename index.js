@@ -99,19 +99,21 @@ let feedbackContainer = document.querySelector("#feedbackText");
 let questionIndex = 0;
 let correctAnswer = 0;
 let timeLeft = 100;
+let questionText = document.querySelector("#question-title");
 
-themeSwitcher.addEventListener("click", function () {
-  startContainer.classList.add("hide");
-  timeLeft = 100;
-  renderQuestion();
-});
+if (themeSwitcher !== null) {
+  themeSwitcher.addEventListener("click", function () {
+    startContainer.classList.add("hide");
+    timeLeft = 100;
+    renderQuestion();
+  });
+}
 
 function renderQuestion() {
   choicesContainer.innerHTML = "";
 
   // display question
-  document.querySelector("#question-title").textContent =
-    questions[questionIndex].question;
+  questionText.textContent = questions[questionIndex].question;
 
   // my array of choices for every question
   let choices = questions[questionIndex].choices;
@@ -130,7 +132,9 @@ function renderQuestion() {
 
 function checkAnswer(currentChoiceIndex, expectedIndex) {
   questionIndex++;
-  renderQuestion();
+  if (questionIndex < questions.length) {
+    renderQuestion();
+  }
 
   if (currentChoiceIndex === expectedIndex) {
     // correct answer
@@ -159,16 +163,18 @@ function endQuiz() {
 
 // set time interval
 function timer() {
-  let timeInterval = setInterval(function () {
-    timeLeft--;
-    time.textContent = timeLeft;
+  if (time !== null) {
+    let timeInterval = setInterval(function () {
+      timeLeft--;
+      time.textContent = timeLeft;
 
-    if (timeLeft === 0 || questionIndex === questions.length) {
-      clearInterval(timeInterval);
+      if (timeLeft === 0 || questionIndex === questions.length) {
+        clearInterval(timeInterval);
 
-      endQuiz();
-    }
-  }, 1000);
+        endQuiz();
+      }
+    }, 1000);
+  }
 }
 timer();
 
@@ -182,14 +188,17 @@ function finalScore() {
 //add event listener for submit button
 
 let submitBtn = document.querySelector("#submit");
-submitBtn.addEventListener("click", function () {
-  let initialsE1 = document.querySelector("#initials");
-  initialsE1.setAttribute("Initials", initialsE1.textContent);
-  //Save data to localStorage.
-  // console.log("initi " + initialsE1.value + "  score " + timeLeft);
-  localStorage.setItem("Initials", initialsE1.value);
-  localStorage.setItem("Final Score ", timeLeft);
-});
+if (submitBtn !== null) {
+  submitBtn.addEventListener("click", function () {
+    let initialsE1 = document.querySelector("#initials");
+    initialsE1.setAttribute("Initials", initialsE1.textContent);
+    //Save data to localStorage.
+    // console.log("initi " + initialsE1.value + "  score " + timeLeft);
+    localStorage.setItem("Initials", initialsE1.value);
+    localStorage.setItem("Final Score ", timeLeft);
+  });
+}
+
 function highScore() {
   let highscoreEl = document.querySelector("#highscores");
   //console.log("local  " + localStorage.getItem("Final Score "));
