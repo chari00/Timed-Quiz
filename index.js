@@ -94,10 +94,8 @@ let questionsContainer = document.querySelector("#questions");
 let startContainer = document.querySelector("#start-screen");
 let endContainer = document.querySelector("#end-screen");
 let themeSwitcher = document.querySelector("#start");
-let wrapper = document.querySelector(".wrapper");
 let startbtn = document.querySelector("#start");
 let feedbackContainer = document.querySelector("#feedbackText");
-
 let questionIndex = 0;
 let correctAnswer = 0;
 let timeLeft = 100;
@@ -116,11 +114,11 @@ function renderQuestion() {
     questions[questionIndex].question;
 
   // my array of choices for every question
-  const choices = questions[questionIndex].choices;
+  let choices = questions[questionIndex].choices;
 
   for (let i = 0; i < choices.length; i++) {
     // create the choices buttons
-    const choiceButton = document.createElement("button");
+    let choiceButton = document.createElement("button");
     choiceButton.textContent = choices[i];
     choicesContainer.appendChild(choiceButton);
 
@@ -184,7 +182,7 @@ function finalScore() {
 //add event listener for submit button
 
 let submitBtn = document.querySelector("#submit");
-submitBtn.addEventListener("click", function (event) {
+submitBtn.addEventListener("click", function () {
   let initialsE1 = document.querySelector("#initials");
   initialsE1.setAttribute("Initials", initialsE1.textContent);
   //Save data to localStorage.
