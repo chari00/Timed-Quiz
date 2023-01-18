@@ -137,20 +137,20 @@ function checkAnswer(currentChoiceIndex, expectedIndex) {
 
   if (currentChoiceIndex === expectedIndex) {
     // correct answer
-    feedbackContainer.setAttribute("feedback", "Correct");
+    feedbackContainer.setAttribute("feedback", "Correct!");
     feedbackContainer.classList.remove("hide");
 
-    console.log("CORRECT ANSWER");
+    // console.log("CORRECT ANSWER");
   } else {
     if (timeLeft > 10) {
       // subtract time from timer
       timeLeft -= 10;
     } else {
       timeLeft = 1;
-      feedbackContainer.setAttribute("feedback", "Wrong");
+      feedbackContainer.setAttribute("feedback", "Wrong!");
     }
     feedbackContainer.classList.remove("hide");
-    console.log("WRONG ANSWER");
+    // console.log("WRONG ANSWER");
   }
 }
 
