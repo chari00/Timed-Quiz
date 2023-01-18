@@ -13,6 +13,7 @@
 ## 1. Description
 
 
+
 ## 2. Visual
 
 ### Image of the project in console view.
@@ -35,7 +36,6 @@
 - <img src="/assets/images/score.png">
 ## 3. Built with:
 
-- javascript
 - html
 - css
 
