@@ -12,7 +12,7 @@
 
 ## 1. Description
 
-This is a timed quiz project that allows the user to answer each questions with multiple - choices for a limited time. The user get points for each correct answer, and get ten seconds time deduction from each incorrect answer.
+
 
 ## 2. Visual
 
@@ -30,10 +30,10 @@ This is a timed quiz project that allows the user to answer each questions with 
 
 - <img src="/assets/images/correct.png">
 
+
 - <img src="/assets/images/wrong.png">
 
 - <img src="/assets/images/score.png">
-
 ## 3. Built with:
 
 - javascript
@@ -67,6 +67,9 @@ https://chari00.github.io/Timed-Quiz/
 - https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
 - https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
+
+- https://www.w3schools.com/js/js_quiz.asp
+
 
 ## 7. License
 
