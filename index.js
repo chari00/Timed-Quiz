@@ -89,6 +89,7 @@ let questions = [
 ];
 
 let time = document.querySelector("#time");
+let timeText = document.querySelector(".timer");
 let choicesContainer = document.querySelector("#choices");
 let questionsContainer = document.querySelector("#questions");
 let startContainer = document.querySelector("#start-screen");
@@ -101,8 +102,13 @@ let timeLeft = 100;
 let questionText = document.querySelector("#question-title");
 
 if (themeSwitcher !== null) {
+  time.classList.add("hide");
+  timeText.classList.add("hide");
   themeSwitcher.addEventListener("click", function () {
     startContainer.classList.add("hide");
+    time.classList.remove("hide");
+    timeText.classList.remove("hide");
+
     timeLeft = 100;
     renderQuestion();
   });
@@ -191,7 +197,6 @@ if (submitBtn !== null) {
     let initialsE1 = document.querySelector("#initials");
     initialsE1.setAttribute("Initials", initialsE1.textContent);
     //Save data to localStorage.
-    // console.log("initi " + initialsE1.value + "  score " + timeLeft);
     localStorage.setItem("Initials", initialsE1.value);
     localStorage.setItem("Final Score ", timeLeft);
   });
@@ -199,7 +204,6 @@ if (submitBtn !== null) {
 
 function highScore() {
   let highscoreEl = document.querySelector("#highscores");
-  //console.log("local  " + localStorage.getItem("Final Score "));
   highscoreEl.textContent =
     localStorage.getItem("Initials") +
     "  " +
