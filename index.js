@@ -99,6 +99,7 @@ let feedbackContainer = document.querySelector("#feedbackText");
 let questionIndex = 0;
 let correctAnswer = 0;
 let timeLeft = 100;
+let startedQuiz = false;
 let questionText = document.querySelector("#question-title");
 
 if (themeSwitcher !== null) {
@@ -107,8 +108,8 @@ if (themeSwitcher !== null) {
   themeSwitcher.addEventListener("click", function () {
     startContainer.classList.add("hide");
     time.classList.remove("hide");
+    startedQuiz = true;
     timeText.classList.remove("hide");
-
     timeLeft = 100;
     renderQuestion();
   });
@@ -168,9 +169,12 @@ function endQuiz() {
 
 // set time interval
 function timer() {
-  if (time !== null) {
+  if (time !== null ) {
     let timeInterval = setInterval(function () {
-      timeLeft--;
+      if (startedQuiz){
+        timeLeft--;
+      }
+      
       time.textContent = timeLeft;
 
       if (timeLeft === 0 || questionIndex === questions.length) {
